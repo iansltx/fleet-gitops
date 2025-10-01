@@ -6,5 +6,11 @@
 
 name: No team
 policies:
-controls: # This cannot be set here and in default.yml
+  - path: ../lib/macos/policies/macos-device-health.policies.yml
+  - path: ../lib/windows/policies/windows-device-health.policies.yml
+  - path: ../lib/linux/policies/linux-device-health.policies.yml
+controls:
+  scripts:
+    - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
+    - path: ../lib/macos/scripts/set-timezone.script.sh
 software:
