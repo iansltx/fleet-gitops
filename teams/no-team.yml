@@ -8,7 +8,7 @@ name: No team
 policies:
   - path: ../lib/macos/policies/macos-device-health.policies.yml
   - path: ../lib/windows/policies/windows-device-health.policies.yml
-  - path: ../lib/linux/policies/linux-device-health.policies.yml
+#  - path: ../lib/linux/policies/linux-device-health.policies.yml
 controls:
   scripts:
     - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
