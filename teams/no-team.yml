@@ -14,3 +14,6 @@ controls:
     - path: ../lib/macos/scripts/remove-zoom-artifacts.script.sh
     - path: ../lib/macos/scripts/set-timezone.script.sh
 software:
+  packages:
+  - path: ../lib/macos/software/1pw.yml
+  - path: ../lib/macos/software/firefox.yml
