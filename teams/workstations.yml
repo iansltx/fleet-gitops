@@ -30,4 +30,6 @@ team_settings:
 software:
   packages:
   - path: ../lib/macos/software/1pw.yml
+    icon:
+      path: ../lib/macos/icon.png
 #  - path: ../lib/macos/software/firefox.yml
