@@ -5,6 +5,23 @@
 # - This file updates policies and queries that run on all hosts ("All teams").
 # - Remove "controls" and add this to your YAML files in teams/ instead.
 
+labels:
+  - name: Arm64
+    description: Hosts on the Arm64 architecture
+    query: "SELECT 1 FROM system_info WHERE cpu_type LIKE 'arm64%' OR cpu_type LIKE 'aarch64%'"
+    label_membership_type: dynamic
+  - name: C-Suite
+    description: Hosts belonging to the C-Suite
+    label_membership_type: manual
+    hosts:
+      - "ceo-laptop"
+      - "the-CFOs-computer"
+  - name: Engineering department
+    description: Hosts used by engineers
+    label_membership_type: host_vitals
+    criteria:
+      vital: end_user_idp_department
+      value: Engineering
 policies:
 queries:
   - path: ./lib/all/queries/collect-usb-devices.queries.yml
