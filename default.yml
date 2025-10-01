@@ -12,11 +12,11 @@ agent_options:
 controls: # This cannot be set here and in no-team.yml
 org_settings:
   server_settings:
-    server_url: $FLEET_URL
+    server_url: https://localhost:8080
   org_info:
     org_name: Fleet
   secrets:
-    - secret: "$FLEET_GLOBAL_ENROLL_SECRET"
+    - secret: this_is_a_global_enroll_secret
   features:
     enable_host_users: true
     enable_software_inventory: true
